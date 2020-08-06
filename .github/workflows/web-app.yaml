@@ -12,6 +12,12 @@ jobs:
           repository: Azure-Samples/nodejs-docs-hello-world
           path: workflow
           
+      - name: Login to Azure
+        continue-on-error: true
+        uses: azure/login@v1.1
+        with:
+         creds: ${{secrets.AAD_CREDS}}
+         
       - name: Deploy to WebAPP
         uses: azure/webapps-deploy@v2
         with:
