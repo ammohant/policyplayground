@@ -1,0 +1,22 @@
+name: Web App Deployment - NonCompliant
+on: [push]
+
+jobs:
+  build:
+    name: Web App Deployemnt - NonCompliant
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
+        with:
+          repository: Azure-Samples/nodejs-docs-hello-world
+          path: workflow
+          
+      - name: Deploy to WebAPP
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ammohant-webapp-node
+          publish-profile: ${{ secrets.PUBLISHPROFILES }}
+          package: ./workflow/
+      
+     
