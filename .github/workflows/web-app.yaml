@@ -9,7 +9,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v2
         with:
-          repository: Azure-Samples/nodejs-docs-hello-world
+          repository: ammohant/nd-hello-world
           path: workflow
           
       - name: Login to Azure
