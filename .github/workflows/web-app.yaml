@@ -27,8 +27,8 @@ jobs:
           package: ./workflow/
       
       - name: Check for resource compliance
-      uses: azure/policy-compliance-scan@v0
-      with:
-        scopes: |
-          /subscriptions/RMDev/resourceGroups/ammohant/ammohant-webapp-node
+        uses: azure/policy-compliance-scan@v0
+        with:
+          scopes: |
+            /subscriptions/RMDev/resourceGroups/ammohant/ammohant-webapp-node
      
