@@ -14,7 +14,7 @@ jobs:
           path: workflow
           
       - name: Login to Azure
-        continue-on-error: true
+        continue-on-error: false
         uses: azure/login@v1.1
         with:
          creds: ${{secrets.AAD_CREDS}}
